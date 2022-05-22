@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.newnews.Models.NewsHeadlines;
 import com.squareup.picasso.Picasso;
 
+// 클릭했을 시에 자세한 뉴스를 나타냄
 public class DetailsActivity extends AppCompatActivity {
     NewsHeadlines headlines;
     TextView txt_title, txt_author, txt_time, txt_detail, txt_content;

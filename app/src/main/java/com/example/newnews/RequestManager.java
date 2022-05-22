@@ -13,14 +13,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+//API 로부터 데이터를 요청한다.
 public class RequestManager {
-    Context context;
+    Context context; // 본문 변수
 
+    // Retrofit 라이브러리 이용
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://newsapi.org/v2/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
+    // 뉴스 헤드라인을 얻어온다.
     public void getNewsHeadlines(OnFetchDataListener listener, String category, String query)
     {
         CallNewsApi callNewsApi = retrofit.create(CallNewsApi.class);

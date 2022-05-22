@@ -14,10 +14,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+// Adapter 를 커스텀
 public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
-    private Context context;
-    private List<NewsHeadlines> headlines;
-    private SelectListener listener;
+    private Context context; // 뉴스 본문
+    private List<NewsHeadlines> headlines; // 뉴스 헤드라인
+    private SelectListener listener; // 뉴스 선택 시의 액션 리스너
 
 
     public CustomAdapter(Context context, List<NewsHeadlines> headlines, SelectListener listener) {
@@ -26,6 +27,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
         this.listener = listener;
     }
 
+    //
     @NonNull
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
